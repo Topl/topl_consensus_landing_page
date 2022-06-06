@@ -51,7 +51,7 @@ class HeroHeader extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/blocks.png',
-                    width: 480,
+                    width: 400,
                   ),
                 ],
               ),
