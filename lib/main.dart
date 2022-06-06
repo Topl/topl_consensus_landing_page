@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
+import 'package:topl_consensus_landing_page/widgets/global_gaps.dart';
 import 'package:topl_consensus_landing_page/widgets/hero_header.dart';
 
 void main() {
@@ -51,10 +52,11 @@ class HomePage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          const HeroHeader(),
+      body: ListView(
+        // mainAxisAlignment: MainAxisAlignment.start,
+        children: const <Widget>[
+          HeroHeader(),
+          GlobalGaps(),
         ],
       ),
     );

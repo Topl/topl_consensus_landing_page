@@ -9,7 +9,6 @@ class ToplTextStyles {
     fontSize: 40,
     fontWeight: FontWeight.bold,
     color: ToplColors.defaultText,
-    height: 1.57,
     letterSpacing: 1.42,
   );
   static const TextStyle h2 = TextStyle(
@@ -17,7 +16,6 @@ class ToplTextStyles {
     fontSize: 34,
     fontWeight: FontWeight.bold,
     color: ToplColors.defaultText,
-    height: 1.34,
   );
   static const TextStyle h3 = TextStyle(
     fontFamily: 'DM Sans',
@@ -34,13 +32,11 @@ class ToplTextStyles {
     fontFamily: 'DM Sans',
     fontSize: 16,
     color: ToplColors.defaultText,
-    height: 2.67,
   );
   static const TextStyle body1Bold = TextStyle(
     fontFamily: 'DM Sans',
     fontSize: 16,
     color: ToplColors.defaultText,
     fontWeight: FontWeight.bold,
-    height: 1.2,
   );
 }
