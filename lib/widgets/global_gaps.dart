@@ -28,7 +28,9 @@ class GlobalGaps extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.48),
-              child: const Divider(),
+              child: const Divider(
+                color: ToplColors.greyText,
+              ),
             ),
             const SizedBox(
               height: 60,
@@ -40,7 +42,7 @@ class GlobalGaps extends StatelessWidget {
                 Expanded(
                   flex: 1,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 100),
+                    padding: const EdgeInsets.symmetric(horizontal: 100),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
