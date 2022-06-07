@@ -45,7 +45,7 @@ class GlobalGaps extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 100),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         FaIcon(
                           FontAwesomeIcons.temperatureHalf,
                           size: 50,
@@ -63,7 +63,7 @@ class GlobalGaps extends StatelessWidget {
                         ),
                         Text(
                           'We need to cut carbon emissions by 28 billion tonnes of CO2 per year beyond current commitments to maintain global warming at only 1.5C',
-                          style: ToplTextStyles.body1,
+                          style: ToplTextStyles.body1.copyWith(color: ToplColors.greyText),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -76,7 +76,7 @@ class GlobalGaps extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 100),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         FaIcon(
                           FontAwesomeIcons.personDress,
                           size: 50,
@@ -94,7 +94,7 @@ class GlobalGaps extends StatelessWidget {
                         ),
                         Text(
                           '1 billion women worldwide still do not have access to the global financial system',
-                          style: ToplTextStyles.body1,
+                          style: ToplTextStyles.body1.copyWith(color: ToplColors.greyText),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -107,7 +107,7 @@ class GlobalGaps extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 100),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         FaIcon(
                           FontAwesomeIcons.sackDollar,
                           size: 50,
@@ -125,7 +125,7 @@ class GlobalGaps extends StatelessWidget {
                         ),
                         Text(
                           "The world’s 26 richest people have more wealth than the world's poorest 3.8 billion people",
-                          style: ToplTextStyles.body1,
+                          style: ToplTextStyles.body1.copyWith(color: ToplColors.greyText),
                           textAlign: TextAlign.center,
                         ),
                       ],

@@ -12,7 +12,16 @@ class ScalableAndInterconnected extends StatelessWidget {
 
     return Container(
       width: screenSize.width,
-      color: ToplColors.primaryOffColor,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          colors: [
+            ToplColors.tertiary,
+            ToplColors.primaryGradient,
+          ],
+        ),
+      ),
       child: Padding(
         padding: const EdgeInsets.only(bottom: 140),
         child: Row(

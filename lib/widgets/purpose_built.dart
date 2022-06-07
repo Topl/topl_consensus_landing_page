@@ -12,7 +12,16 @@ class PurposeBuilt extends StatelessWidget {
 
     return Container(
       width: screenSize.width,
-      color: ToplColors.primaryOffColor,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          colors: [
+            ToplColors.tertiary,
+            ToplColors.primaryGradient,
+          ],
+        ),
+      ),
       child: Padding(
         padding: const EdgeInsets.only(top: 140),
         child: Row(
@@ -22,7 +31,6 @@ class PurposeBuilt extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   SimpleShadow(
@@ -30,10 +38,10 @@ class PurposeBuilt extends StatelessWidget {
                       'images/purpose_built.png',
                       width: 480,
                     ),
-                    opacity: 0.5, // Default: 0.5
-                    color: Colors.white, // Default: Black
-                    offset: const Offset(1, 1), // Default: Offset(2, 2)
-                    sigma: 10, // Default: 2
+                    opacity: 0.5,
+                    color: Colors.white,
+                    offset: const Offset(1, 1),
+                    sigma: 10,
                   ),
                 ],
               ),
