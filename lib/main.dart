@@ -5,6 +5,7 @@ import 'package:topl_consensus_landing_page/widgets/community_forward.dart';
 import 'package:topl_consensus_landing_page/widgets/global_gaps.dart';
 import 'package:topl_consensus_landing_page/widgets/grant_program.dart';
 import 'package:topl_consensus_landing_page/widgets/hero_header.dart';
+import 'package:topl_consensus_landing_page/widgets/process.dart';
 import 'package:topl_consensus_landing_page/widgets/purpose_built.dart';
 import 'package:topl_consensus_landing_page/widgets/scalable_and_interconnected.dart';
 
@@ -70,6 +71,7 @@ class HomePage extends StatelessWidget {
               CommunityForward(),
               ScalableAndInterconnected(),
               GrantProgram(),
+              Process(),
             ],
           ),
         ),

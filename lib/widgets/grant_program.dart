@@ -17,7 +17,7 @@ class GrantProgram extends StatelessWidget {
       List<int> nums = [0, 1];
 
       for (var element in nums) {
-        await Future<void>.delayed(const Duration(seconds: 0));
+        await Future<void>.delayed(const Duration(milliseconds: 500));
         yield element;
       }
     })();
@@ -194,6 +194,7 @@ class GrantProgram extends StatelessWidget {
               width: screenSize.width * 0.8,
               height: 300,
               child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
                 itemCount: 5,
                 itemBuilder: (context, index) => ItemTile(itemNo: index),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
