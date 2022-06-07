@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
+import 'package:topl_consensus_landing_page/widgets/button_partial.dart';
 import 'package:topl_consensus_landing_page/widgets/community_forward.dart';
 import 'package:topl_consensus_landing_page/widgets/global_gaps.dart';
 import 'package:topl_consensus_landing_page/widgets/grant_program.dart';
@@ -72,6 +73,7 @@ class HomePage extends StatelessWidget {
               ScalableAndInterconnected(),
               GrantProgram(),
               Process(),
+              ButtonPartial(),
             ],
           ),
         ),
