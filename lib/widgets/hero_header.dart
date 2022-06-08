@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:simple_shadow/simple_shadow.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/constants/styles.dart';
 
@@ -11,7 +13,7 @@ class HeroHeader extends StatelessWidget {
 
     return Container(
       width: screenSize.width,
-      height: screenSize.height * 0.48,
+      height: screenSize.height * 0.55,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.centerLeft,
@@ -49,9 +51,16 @@ class HeroHeader extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Image.asset(
-                    'images/blocks.png',
-                    width: 400,
+                  SimpleShadow(
+                    child: SvgPicture.asset(
+                      'images/blockchain.svg',
+                      width: 435,
+                      color: Colors.white,
+                    ),
+                    opacity: 0.5,
+                    color: Colors.white,
+                    offset: const Offset(1, 1),
+                    sigma: 10,
                   ),
                 ],
               ),

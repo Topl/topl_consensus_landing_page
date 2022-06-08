@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/constants/styles.dart';
 
@@ -46,19 +46,20 @@ class GlobalGaps extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        FaIcon(
-                          FontAwesomeIcons.temperatureHalf,
-                          size: 50,
+                        SvgPicture.asset(
+                          'images/global_warming.svg',
+                          width: 300,
+                          color: ToplColors.defaultText,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        Text(
+                        const Text(
                           'Carbon reduction gap',
                           style: ToplTextStyles.h3,
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Text(
@@ -73,23 +74,24 @@ class GlobalGaps extends StatelessWidget {
                 Expanded(
                   flex: 1,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 100),
+                    padding: const EdgeInsets.symmetric(horizontal: 100),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        FaIcon(
-                          FontAwesomeIcons.personDress,
-                          size: 50,
+                        SvgPicture.asset(
+                          'images/gender_scale.svg',
+                          width: 300,
+                          color: ToplColors.defaultText,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        Text(
+                        const Text(
                           'Gender access to \ncapital gap',
                           style: ToplTextStyles.h3,
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Text(
@@ -104,23 +106,24 @@ class GlobalGaps extends StatelessWidget {
                 Expanded(
                   flex: 1,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 100),
+                    padding: const EdgeInsets.symmetric(horizontal: 100),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        FaIcon(
-                          FontAwesomeIcons.sackDollar,
-                          size: 50,
+                        SvgPicture.asset(
+                          'images/wealth_gap.svg',
+                          width: 300,
+                          color: ToplColors.defaultText,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        Text(
+                        const Text(
                           'Global wealth gap',
                           style: ToplTextStyles.h3,
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Text(

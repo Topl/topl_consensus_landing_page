@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/constants/styles.dart';
@@ -34,9 +35,10 @@ class ScalableAndInterconnected extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   SimpleShadow(
-                    child: Image.asset(
-                      'images/scalable_and_interconnected.png',
-                      width: 480,
+                    child: SvgPicture.asset(
+                      'images/connected.svg',
+                      width: 300,
+                      color: Colors.white,
                     ),
                     opacity: 0.5,
                     color: Colors.white,

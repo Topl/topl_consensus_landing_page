@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'dart:html' as html;
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
@@ -172,26 +173,30 @@ class ItemTile extends StatelessWidget {
         'title': 'Dual Tokenomics',
         'subtitle':
             "Key to ensuring Topl can support broad networks of users is ensuring that transaction fees remain low and stable even as the network grows in popularity and value. With a dual-token design, Topl's users benefit from access to the Poly stablecoin to pay for transaction fees, which remains stable even as the network appreciates in value.",
+        'imageLink': 'images/tokens.svg',
       },
       {
         'title': 'Smart Assets and DSL',
         'subtitle':
             'With a community and user-informed design mentality, Topl has incorporated a robust token system, supporting (non-)fungibility and many other token behaviors, along with a simple and efficient DSL, Quivr.',
+        'imageLink': 'images/diamond.svg',
       },
       {
         'title': 'Layer 2 Smart Contracts',
         'subtitle':
             "For the use-cases where Quivr proves to limiting, the second layer of Topl's ledger logic system comes into play. Topl integrates the fully Turing-complete Digital Asset Modeling Language (DAML) as a scalable, privacy preserving layer 2 scheme.",
+        'imageLink': 'images/contract.svg',
       },
       {
         'title': 'Taktikos PoS',
         'subtitle':
             "Topl's novel consensus algorithm, Taktikos, breaks the trend of allowing only those users with extremely large token balances to participate in staking while at the same time being the first protocol to exceed the security guarantees of Bitcoin's Proof-of-Work.",
+        'imageLink': 'images/pos.svg',
       },
     ];
 
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: SimpleShadow(
         child: ConstrainedBox(
           constraints: const BoxConstraints(
@@ -204,13 +209,11 @@ class ItemTile extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const SizedBox(height: 10),
-                  Container(
-                    width: 200,
-                    height: 200,
-                    color: ToplColors.inactive,
+                  SvgPicture.asset(
+                    grantProgramConditions[itemNo]['imageLink'],
+                    width: 300,
+                    color: ToplColors.defaultText,
                   ),
-                  const SizedBox(height: 20),
                   Text(
                     grantProgramConditions[itemNo]['title'],
                     style: ToplTextStyles.h3.copyWith(color: ToplColors.defaultText),
@@ -218,7 +221,7 @@ class ItemTile extends StatelessWidget {
                   ),
                   Text(
                     grantProgramConditions[itemNo]['subtitle'],
-                    style: ToplTextStyles.body1.copyWith(color: ToplColors.defaultText),
+                    style: ToplTextStyles.body1.copyWith(color: ToplColors.greyText),
                     textAlign: TextAlign.center,
                   )
                 ],
