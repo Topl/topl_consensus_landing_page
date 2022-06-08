@@ -9,6 +9,7 @@ import 'package:topl_consensus_landing_page/widgets/hero_header.dart';
 import 'package:topl_consensus_landing_page/widgets/process.dart';
 import 'package:topl_consensus_landing_page/widgets/purpose_built.dart';
 import 'package:topl_consensus_landing_page/widgets/scalable_and_interconnected.dart';
+import 'package:topl_consensus_landing_page/widgets/topl_tech.dart';
 
 void main() {
   runApp(const MyApp());
@@ -74,6 +75,7 @@ class HomePage extends StatelessWidget {
               GrantProgram(),
               Process(),
               ButtonPartial(),
+              ToplTech(),
             ],
           ),
         ),

@@ -17,6 +17,7 @@ dependencies:
   flutter_svg: ^1.0.3
   simple_shadow: ^0.3.0
   flip_board: ^0.6.1
+  responsive_grid: ^2.1.0
 
 dev_dependencies:
   flutter_test:

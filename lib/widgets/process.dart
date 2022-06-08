@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
@@ -73,7 +74,7 @@ class Process extends StatelessWidget {
                     child: SizedBox(
                       width: 180,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () => html.window.open('https://topl.typeform.com/to/u1gCxpFe', 'new tab'),
                         style: ElevatedButton.styleFrom(
                           primary: ToplColors.primary,
                           shape: RoundedRectangleBorder(
