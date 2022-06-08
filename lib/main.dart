@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/widgets/backed_by.dart';
+import 'package:topl_consensus_landing_page/widgets/bottom_bar.dart';
 import 'package:topl_consensus_landing_page/widgets/button_partial.dart';
 import 'package:topl_consensus_landing_page/widgets/community_forward.dart';
 import 'package:topl_consensus_landing_page/widgets/global_gaps.dart';
@@ -78,6 +79,7 @@ class HomePage extends StatelessWidget {
               ButtonPartial(),
               ToplTech(),
               BackedBy(),
+              BottomBar(),
             ],
           ),
         ),

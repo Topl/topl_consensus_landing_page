@@ -39,6 +39,11 @@ class ToplTextStyles {
     color: ToplColors.defaultText,
     fontWeight: FontWeight.bold,
   );
+  static const TextStyle body1Small = TextStyle(
+    fontFamily: 'DM Sans',
+    fontSize: 14,
+    color: ToplColors.defaultText,
+  );
   static const TextStyle commaDivider = TextStyle(
     fontFamily: 'DM Sans',
     fontSize: 60,
