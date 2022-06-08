@@ -27,7 +27,7 @@ class GrantProgram extends StatelessWidget {
 
     return Container(
       width: screenSize.width,
-      color: ToplColors.background,
+      color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 140),
         child: Column(
