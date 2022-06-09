@@ -79,7 +79,7 @@ class _ButtonPartialState extends State<ButtonPartial> {
                 SizedBox(
                   width: 180,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => html.window.open('https://discord.gg/5rh9xAPP', 'new tab'),
                     style: ElevatedButton.styleFrom(
                       shadowColor: Colors.transparent,
                       primary: Colors.transparent,

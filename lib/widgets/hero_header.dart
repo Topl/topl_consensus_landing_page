@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:responsive_grid/responsive_grid.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/constants/styles.dart';
@@ -13,7 +14,6 @@ class HeroHeader extends StatelessWidget {
 
     return Container(
       width: screenSize.width,
-      height: screenSize.height * 0.55,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.centerLeft,
@@ -26,12 +26,12 @@ class HeroHeader extends StatelessWidget {
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.1),
-        child: Row(
+        child: ResponsiveGridRow(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Expanded(
-              flex: 1,
+            ResponsiveGridCol(
+              lg: 6,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -45,24 +45,26 @@ class HeroHeader extends StatelessWidget {
                 ],
               ),
             ),
-            Expanded(
-              flex: 1,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  SimpleShadow(
-                    child: SvgPicture.asset(
-                      'images/blockchain.svg',
-                      width: 435,
+            ResponsiveGridCol(
+              lg: 6,
+              child: Padding(
+                padding: const EdgeInsets.all(0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    SimpleShadow(
+                      child: SvgPicture.asset(
+                        'images/blockchain.svg',
+                        width: 435,
+                        color: Colors.white,
+                      ),
+                      opacity: 0.5,
                       color: Colors.white,
+                      offset: const Offset(1, 1),
+                      sigma: 10,
                     ),
-                    opacity: 0.5,
-                    color: Colors.white,
-                    offset: const Offset(1, 1),
-                    sigma: 10,
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],
