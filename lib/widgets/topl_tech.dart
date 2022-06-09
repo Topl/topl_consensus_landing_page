@@ -8,6 +8,7 @@ import 'package:simple_shadow/simple_shadow.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/constants/styles.dart';
 import 'package:responsive_grid/responsive_grid.dart';
+import 'package:topl_consensus_landing_page/helpers.dart';
 
 class ToplTech extends StatelessWidget {
   const ToplTech({Key? key}) : super(key: key);
@@ -15,6 +16,81 @@ class ToplTech extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+
+    List<Widget> returnSocialButtons() {
+      return [
+        SizedBox(
+          width: 200,
+          child: SizedBox(
+            width: 180,
+            child: ElevatedButton(
+              onPressed: () => html.window.open('https://wiki.topl.co', 'new tab'),
+              style: ElevatedButton.styleFrom(
+                primary: ToplColors.primary,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                elevation: 0,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    const FaIcon(
+                      FontAwesomeIcons.bookAtlas,
+                      size: 20,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      'Visit Wiki',
+                      style: ToplTextStyles.body1Bold.copyWith(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 20,
+          height: 20,
+        ),
+        SizedBox(
+          width: 200,
+          child: SizedBox(
+            width: 200,
+            child: ElevatedButton(
+              onPressed: () => html.window.open('https://github.com/topl', 'new tab'),
+              style: ElevatedButton.styleFrom(
+                primary: ToplColors.primary,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                elevation: 0,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    const FaIcon(
+                      FontAwesomeIcons.github,
+                      size: 20,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      'Visit Github',
+                      style: ToplTextStyles.body1Bold.copyWith(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ];
+    }
 
     return Container(
       width: screenSize.width,
@@ -63,19 +139,31 @@ class ToplTech extends StatelessWidget {
                 children: [
                   ResponsiveGridCol(
                     lg: 3,
-                    child: const ItemTile(itemNo: 0),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20),
+                      child: ItemTile(itemNo: 0),
+                    ),
                   ),
                   ResponsiveGridCol(
                     lg: 3,
-                    child: const ItemTile(itemNo: 1),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20),
+                      child: ItemTile(itemNo: 1),
+                    ),
                   ),
                   ResponsiveGridCol(
                     lg: 3,
-                    child: const ItemTile(itemNo: 2),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20),
+                      child: ItemTile(itemNo: 2),
+                    ),
                   ),
                   ResponsiveGridCol(
                     lg: 3,
-                    child: const ItemTile(itemNo: 3),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20),
+                      child: ItemTile(itemNo: 3),
+                    ),
                   ),
                 ],
               ),
@@ -83,74 +171,14 @@ class ToplTech extends StatelessWidget {
             const SizedBox(
               height: 140,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 180,
-                  child: ElevatedButton(
-                    onPressed: () => html.window.open('https://wiki.topl.co', 'new tab'),
-                    style: ElevatedButton.styleFrom(
-                      primary: ToplColors.primary,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      elevation: 0,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          const FaIcon(
-                            FontAwesomeIcons.bookAtlas,
-                            size: 20,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            'Visit Wiki',
-                            style: ToplTextStyles.body1Bold.copyWith(color: Colors.white),
-                          ),
-                        ],
-                      ),
-                    ),
+            isSmallScreen(context)
+                ? Column(
+                    children: returnSocialButtons(),
+                  )
+                : Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: returnSocialButtons(),
                   ),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                SizedBox(
-                  width: 200,
-                  child: ElevatedButton(
-                    onPressed: () => html.window.open('https://github.com/topl', 'new tab'),
-                    style: ElevatedButton.styleFrom(
-                      primary: ToplColors.primary,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      elevation: 0,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          const FaIcon(
-                            FontAwesomeIcons.github,
-                            size: 20,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            'Visit Github',
-                            style: ToplTextStyles.body1Bold.copyWith(color: Colors.white),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            )
           ],
         ),
       ),
@@ -200,7 +228,7 @@ class ItemTile extends StatelessWidget {
       child: SimpleShadow(
         child: ConstrainedBox(
           constraints: const BoxConstraints(
-            minHeight: 600,
+            minHeight: 700,
           ),
           child: DecoratedBox(
             child: Padding(
