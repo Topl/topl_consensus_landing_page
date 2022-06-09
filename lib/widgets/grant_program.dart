@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flip_board/flip_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:responsive_grid/responsive_grid.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/constants/styles.dart';
 import 'package:topl_consensus_landing_page/helpers.dart';
@@ -47,7 +48,7 @@ class GrantProgram extends StatelessWidget {
       createElementList.insert(
         0,
         Padding(
-          padding: EdgeInsets.only(top: 20, left: 6),
+          padding: const EdgeInsets.only(top: 20, left: 6),
           child: Text(
             ',',
             style: isSmallScreen(context)
@@ -61,7 +62,7 @@ class GrantProgram extends StatelessWidget {
       createElementList.insert(
         4,
         Padding(
-          padding: EdgeInsets.only(top: 20),
+          padding: const EdgeInsets.only(top: 20),
           child: Text(
             ',',
             style: isSmallScreen(context)
@@ -127,7 +128,7 @@ class GrantProgram extends StatelessWidget {
               children: [
                 const SizedBox(width: 5),
                 Padding(
-                  padding: EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 20),
                   child: Text(
                     '\$',
                     style: isSmallScreen(context)
@@ -164,25 +165,62 @@ class GrantProgram extends StatelessWidget {
             const SizedBox(
               height: 140,
             ),
-            const Text(
-              "What we're looking for",
-              style: ToplTextStyles.h2,
-              textAlign: TextAlign.center,
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 40),
+              child: Text(
+                "What we're looking for",
+                style: ToplTextStyles.h2,
+                textAlign: TextAlign.center,
+              ),
             ),
             const Padding(
               padding: EdgeInsets.only(top: 20),
             ),
-            SizedBox(
-              width: screenSize.width * 0.8,
-              height: 300,
-              child: GridView.builder(
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: 5,
-                itemBuilder: (context, index) => ItemTile(itemNo: index),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  childAspectRatio: 3,
-                ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.1),
+              child: ResponsiveGridRow(
+                children: [
+                  ResponsiveGridCol(
+                    lg: 4,
+                    child: const ItemTile(itemNo: 0),
+                  ),
+                  ResponsiveGridCol(
+                    lg: 4,
+                    child: const ItemTile(itemNo: 1),
+                  ),
+                  ResponsiveGridCol(
+                    lg: 4,
+                    child: const ItemTile(itemNo: 2),
+                  ),
+                ],
+              ),
+            ),
+            isSmallScreen(context)
+                ? const SizedBox()
+                : const SizedBox(
+                    height: 40,
+                  ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.1),
+              child: ResponsiveGridRow(
+                children: [
+                  ResponsiveGridCol(
+                    lg: 2,
+                    child: const SizedBox(),
+                  ),
+                  ResponsiveGridCol(
+                    lg: 4,
+                    child: const ItemTile(itemNo: 3),
+                  ),
+                  ResponsiveGridCol(
+                    lg: 4,
+                    child: const ItemTile(itemNo: 4),
+                  ),
+                  ResponsiveGridCol(
+                    lg: 2,
+                    child: const SizedBox(),
+                  ),
+                ],
               ),
             ),
           ],
