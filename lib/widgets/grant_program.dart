@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/constants/styles.dart';
+import 'package:topl_consensus_landing_page/helpers.dart';
 
 class GrantProgram extends StatelessWidget {
   const GrantProgram({Key? key}) : super(key: key);
@@ -25,6 +26,55 @@ class GrantProgram extends StatelessWidget {
     StreamController<int> controller = StreamController<int>.broadcast();
     Stream<int> stream = controller.stream;
 
+    renderFlipWidget(int count) {
+      var createElementList = List.generate(
+        count,
+        (i) => Padding(
+          padding: EdgeInsets.symmetric(horizontal: isSmallScreen(context) ? 4 : 8),
+          child: FlipWidget(
+            flipType: FlipType.middleFlip,
+            itemStream: stream,
+            itemBuilder: _itemBuilder,
+            initialValue: 0,
+            flipDirection: AxisDirection.down,
+            hingeWidth: 2.0,
+            hingeLength: isSmallScreen(context) ? 28 : 56,
+            hingeColor: ToplColors.defaultText,
+          ),
+        ),
+      ).toList();
+
+      createElementList.insert(
+        0,
+        Padding(
+          padding: EdgeInsets.only(top: 20, left: 6),
+          child: Text(
+            ',',
+            style: isSmallScreen(context)
+                ? ToplTextStyles.commaDivider.copyWith(fontSize: 30)
+                : ToplTextStyles.commaDivider,
+            textAlign: TextAlign.center,
+          ),
+        ),
+      );
+
+      createElementList.insert(
+        4,
+        Padding(
+          padding: EdgeInsets.only(top: 20),
+          child: Text(
+            ',',
+            style: isSmallScreen(context)
+                ? ToplTextStyles.commaDivider.copyWith(fontSize: 30)
+                : ToplTextStyles.commaDivider,
+            textAlign: TextAlign.center,
+          ),
+        ),
+      );
+
+      return createElementList;
+    }
+
     return Container(
       width: screenSize.width,
       color: Colors.white,
@@ -33,25 +83,32 @@ class GrantProgram extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            RichText(
-              text: TextSpan(
-                text: '\$10 Million ',
-                style: ToplTextStyles.h2.copyWith(color: ToplColors.tertiary),
-                children: const <TextSpan>[
-                  TextSpan(
-                    text: 'Grant Program',
-                    style: ToplTextStyles.h2,
-                  ),
-                ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: RichText(
+                textAlign: TextAlign.center,
+                text: TextSpan(
+                  text: '\$10 Million ',
+                  style: ToplTextStyles.h2.copyWith(color: ToplColors.tertiary),
+                  children: const <TextSpan>[
+                    TextSpan(
+                      text: 'Grant Program',
+                      style: ToplTextStyles.h2,
+                    ),
+                  ],
+                ),
               ),
             ),
             const SizedBox(
               height: 10,
             ),
-            Text(
-              "Leading up to Topl's decentralization and tokenization event (Q4 2023)",
-              style: ToplTextStyles.body1.copyWith(color: ToplColors.greyText),
-              textAlign: TextAlign.center,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: Text(
+                "Leading up to Topl's decentralization and tokenization event (Q4 2023)",
+                style: ToplTextStyles.body1.copyWith(color: ToplColors.greyText),
+                textAlign: TextAlign.center,
+              ),
             ),
             const SizedBox(
               height: 10,
@@ -69,11 +126,13 @@ class GrantProgram extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(width: 5),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(top: 20),
                   child: Text(
                     '\$',
-                    style: ToplTextStyles.commaDivider,
+                    style: isSmallScreen(context)
+                        ? ToplTextStyles.commaDivider.copyWith(fontSize: 20)
+                        : ToplTextStyles.commaDivider,
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -85,99 +144,22 @@ class GrantProgram extends StatelessWidget {
                   initialValue: 0,
                   flipDirection: AxisDirection.down,
                   hingeWidth: 2.0,
-                  hingeLength: 56.0,
+                  hingeLength: isSmallScreen(context) ? 28 : 56,
                   hingeColor: ToplColors.defaultText,
                 ),
-                const SizedBox(width: 5),
-                const Padding(
-                  padding: EdgeInsets.only(top: 20),
-                  child: Text(
-                    ',',
-                    style: ToplTextStyles.commaDivider,
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                const SizedBox(width: 5),
-                FlipWidget(
-                  flipType: FlipType.middleFlip,
-                  itemStream: stream,
-                  itemBuilder: _itemBuilder,
-                  initialValue: 0,
-                  flipDirection: AxisDirection.down,
-                  hingeWidth: 2.0,
-                  hingeLength: 56.0,
-                  hingeColor: ToplColors.defaultText,
-                ),
-                const SizedBox(width: 10),
-                FlipWidget(
-                  flipType: FlipType.middleFlip,
-                  itemStream: stream,
-                  itemBuilder: _itemBuilder,
-                  initialValue: 0,
-                  flipDirection: AxisDirection.down,
-                  hingeWidth: 2.0,
-                  hingeLength: 56.0,
-                  hingeColor: ToplColors.defaultText,
-                ),
-                const SizedBox(width: 10),
-                FlipWidget(
-                  flipType: FlipType.middleFlip,
-                  itemStream: stream,
-                  itemBuilder: _itemBuilder,
-                  initialValue: 0,
-                  flipDirection: AxisDirection.down,
-                  hingeWidth: 2.0,
-                  hingeLength: 56.0,
-                  hingeColor: ToplColors.defaultText,
-                ),
-                const SizedBox(width: 5),
-                const Padding(
-                  padding: EdgeInsets.only(top: 20),
-                  child: Text(
-                    ',',
-                    style: ToplTextStyles.commaDivider,
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                const SizedBox(width: 5),
-                FlipWidget(
-                  flipType: FlipType.middleFlip,
-                  itemStream: stream,
-                  itemBuilder: _itemBuilder,
-                  initialValue: 0,
-                  flipDirection: AxisDirection.down,
-                  hingeWidth: 2.0,
-                  hingeLength: 56.0,
-                  hingeColor: ToplColors.defaultText,
-                ),
-                const SizedBox(width: 10),
-                FlipWidget(
-                  flipType: FlipType.middleFlip,
-                  itemStream: stream,
-                  itemBuilder: _itemBuilder,
-                  initialValue: 0,
-                  flipDirection: AxisDirection.down,
-                  hingeWidth: 2.0,
-                  hingeLength: 56.0,
-                  hingeColor: ToplColors.defaultText,
-                ),
-                const SizedBox(width: 10),
-                FlipWidget(
-                  flipType: FlipType.middleFlip,
-                  itemStream: stream,
-                  itemBuilder: _itemBuilder,
-                  initialValue: 0,
-                  flipDirection: AxisDirection.down,
-                  hingeWidth: 2.0,
-                  hingeLength: 56.0,
-                  hingeColor: ToplColors.defaultText,
-                ),
+                Row(
+                  children: renderFlipWidget(6),
+                )
               ],
             ),
             const SizedBox(height: 20),
-            Text(
-              'Available to be distributed across 20 recipients over the coming 9 months'.toUpperCase(),
-              style: ToplTextStyles.h4.copyWith(color: ToplColors.tertiary),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40),
+              child: Text(
+                'Available to be distributed across 20 recipients over the coming 9 months'.toUpperCase(),
+                style: ToplTextStyles.h4.copyWith(color: ToplColors.tertiary),
+                textAlign: TextAlign.center,
+              ),
             ),
             const SizedBox(
               height: 140,
@@ -210,8 +192,8 @@ class GrantProgram extends StatelessWidget {
   }
 
   Widget _itemBuilder(BuildContext context, int? value) => Container(
-        width: 64.0,
-        height: 64.0,
+        width: isSmallScreen(context) ? 34 : 64,
+        height: isSmallScreen(context) ? 48 : 64,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(4.0)),
@@ -230,7 +212,9 @@ class GrantProgram extends StatelessWidget {
         ),
         child: Text(
           (value).toString(),
-          style: const TextStyle(fontSize: 54.0, color: Colors.white),
+          style: isSmallScreen(context)
+              ? const TextStyle(fontSize: 24.0, color: Colors.white)
+              : const TextStyle(fontSize: 54.0, color: Colors.white),
         ),
       );
 }
