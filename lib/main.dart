@@ -4,13 +4,11 @@ import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/widgets/backed_by.dart';
 import 'package:topl_consensus_landing_page/widgets/bottom_bar.dart';
 import 'package:topl_consensus_landing_page/widgets/button_partial.dart';
-import 'package:topl_consensus_landing_page/widgets/community_forward.dart';
+import 'package:topl_consensus_landing_page/widgets/ethos_container.dart';
 import 'package:topl_consensus_landing_page/widgets/global_gaps.dart';
 import 'package:topl_consensus_landing_page/widgets/grant_program.dart';
 import 'package:topl_consensus_landing_page/widgets/hero_header.dart';
 import 'package:topl_consensus_landing_page/widgets/process.dart';
-import 'package:topl_consensus_landing_page/widgets/purpose_built.dart';
-import 'package:topl_consensus_landing_page/widgets/scalable_and_interconnected.dart';
 import 'package:topl_consensus_landing_page/widgets/topl_tech.dart';
 
 void main() {
@@ -68,9 +66,7 @@ class HomePage extends StatelessWidget {
             children: const <Widget>[
               HeroHeader(),
               GlobalGaps(),
-              PurposeBuilt(),
-              CommunityForward(),
-              ScalableAndInterconnected(),
+              EthosContainer(),
               GrantProgram(),
               Process(),
               ButtonPartial(),
