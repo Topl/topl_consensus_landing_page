@@ -129,6 +129,7 @@ class BottomBarColumn extends StatelessWidget {
               color: Colors.blueGrey[300],
               fontSize: 18,
               fontWeight: FontWeight.w500,
+              fontFamily: 'DM Sans',
             ),
           ),
           const SizedBox(
@@ -162,6 +163,7 @@ class InfoText extends StatelessWidget {
           style: TextStyle(
             color: Colors.blueGrey[300],
             fontSize: 14,
+            fontFamily: 'DM Sans',
           ),
         ),
         SelectableText(
@@ -169,6 +171,7 @@ class InfoText extends StatelessWidget {
           style: TextStyle(
             color: Colors.blueGrey[100],
             fontSize: 14,
+            fontFamily: 'DM Sans',
           ),
         )
       ],

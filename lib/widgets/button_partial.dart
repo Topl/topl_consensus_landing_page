@@ -20,7 +20,7 @@ class _ButtonPartialState extends State<ButtonPartial> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('videos/animated_logo.mp4');
+    _controller = VideoPlayerController.asset('assets/videos/animated_logo.mp4');
     _initializeVideoPlayerFuture = _controller.initialize();
     _controller.setVolume(0);
     _controller.play();
