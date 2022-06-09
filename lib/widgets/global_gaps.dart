@@ -55,7 +55,7 @@ class GlobalGaps extends StatelessWidget {
                     child: Column(
                       children: [
                         SvgPicture.asset(
-                          'images/global_warming.svg',
+                          'assets/images/global_warming.svg',
                           width: 300,
                           color: ToplColors.defaultText,
                         ),
@@ -88,7 +88,7 @@ class GlobalGaps extends StatelessWidget {
                     child: Column(
                       children: [
                         SvgPicture.asset(
-                          'images/gender_scale.svg',
+                          'assets/images/gender_scale.svg',
                           width: 300,
                           color: ToplColors.defaultText,
                         ),
@@ -121,7 +121,7 @@ class GlobalGaps extends StatelessWidget {
                     child: Column(
                       children: [
                         SvgPicture.asset(
-                          'images/wealth_gap.svg',
+                          'assets/images/wealth_gap.svg',
                           width: 300,
                           color: ToplColors.defaultText,
                         ),
@@ -141,7 +141,7 @@ class GlobalGaps extends StatelessWidget {
                             horizontal: returnPaddingByScreenSize(),
                           ),
                           child: Text(
-                            "The world’s 26 richest people have more wealth than the world's poorest 3.8 billion people",
+                            "The world's 26 richest people have more wealth than the world's poorest 3.8 billion people",
                             style: ToplTextStyles.body1.copyWith(color: ToplColors.greyText),
                             textAlign: TextAlign.center,
                           ),

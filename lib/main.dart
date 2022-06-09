@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                 ),
                 backgroundColor: Colors.transparent,
                 title: SvgPicture.asset(
-                  'images/topl_logo_light.svg',
+                  'assets/images/topl_logo_light.svg',
                   width: 60,
                 ),
                 pinned: false,

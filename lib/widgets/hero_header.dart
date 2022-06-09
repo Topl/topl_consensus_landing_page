@@ -52,7 +52,7 @@ class HeroHeader extends StatelessWidget {
                 children: [
                   SimpleShadow(
                     child: SvgPicture.asset(
-                      'images/blockchain.svg',
+                      'assets/images/blockchain.svg',
                       width: 435,
                       color: Colors.white,
                     ),

@@ -44,7 +44,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/mercury.png",
+                        "assets/images/mercury.png",
                         width: 80,
                         height: 80,
                         color: ToplColors.greyText,
@@ -56,7 +56,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/cryptology.png",
+                        "assets/images/cryptology.png",
                         width: 70,
                         height: 70,
                         color: ToplColors.greyText,
@@ -68,7 +68,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/republic.png",
+                        "assets/images/republic.png",
                         width: 60,
                         height: 60,
                         color: ToplColors.greyText,
@@ -80,7 +80,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/mercy_corps.png",
+                        "assets/images/mercy_corps.png",
                         width: 60,
                         height: 60,
                         color: ToplColors.greyText,
@@ -102,7 +102,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/iconic.png",
+                        "assets/images/iconic.png",
                         width: 50,
                         height: 50,
                         color: ToplColors.greyText,
@@ -114,7 +114,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/blue_collective.png",
+                        "assets/images/blue_collective.png",
                         width: 40,
                         height: 40,
                         color: ToplColors.greyText,
@@ -126,7 +126,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/sic.png",
+                        "assets/images/sic.png",
                         width: 100,
                         height: 100,
                         color: ToplColors.greyText,
@@ -138,7 +138,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/goose.png",
+                        "assets/images/goose.png",
                         width: 60,
                         height: 60,
                         color: ToplColors.greyText,
@@ -160,7 +160,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/capital_factory.png",
+                        "assets/images/capital_factory.png",
                         width: 100,
                         height: 100,
                         color: ToplColors.greyText,
@@ -172,7 +172,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/bvc.png",
+                        "assets/images/bvc.png",
                         width: 80,
                         height: 80,
                         color: ToplColors.greyText,
@@ -184,7 +184,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/A100x.png",
+                        "assets/images/A100x.png",
                         width: 80,
                         height: 80,
                         color: ToplColors.greyText,
@@ -196,7 +196,7 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "images/chingona.png",
+                        "assets/images/chingona.png",
                         width: 60,
                         height: 60,
                         color: ToplColors.greyText,

@@ -201,25 +201,25 @@ class ItemTile extends StatelessWidget {
         'title': 'Dual Tokenomics',
         'subtitle':
             "Key to ensuring Topl can support broad networks of users is ensuring that transaction fees remain low and stable even as the network grows in popularity and value. With a dual-token design, Topl's users benefit from access to the Poly stablecoin to pay for transaction fees, which remains stable even as the network appreciates in value.",
-        'imageLink': 'images/tokens.svg',
+        'imageLink': 'assets/images/tokens.svg',
       },
       {
         'title': 'Smart Assets and DSL',
         'subtitle':
             'With a community and user-informed design mentality, Topl has incorporated a robust token system, supporting (non-)fungibility and many other token behaviors, along with a simple and efficient DSL, Quivr.',
-        'imageLink': 'images/diamond.svg',
+        'imageLink': 'assets/images/diamond.svg',
       },
       {
         'title': 'Layer 2 Smart Contracts',
         'subtitle':
             "For the use-cases where Quivr proves to limiting, the second layer of Topl's ledger logic system comes into play. Topl integrates the fully Turing-complete Digital Asset Modeling Language (DAML) as a scalable, privacy preserving layer 2 scheme.",
-        'imageLink': 'images/contract.svg',
+        'imageLink': 'assets/images/contract.svg',
       },
       {
         'title': 'Taktikos PoS',
         'subtitle':
             "Topl's novel consensus algorithm, Taktikos, breaks the trend of allowing only those users with extremely large token balances to participate in staking while at the same time being the first protocol to exceed the security guarantees of Bitcoin's Proof-of-Work.",
-        'imageLink': 'images/pos.svg',
+        'imageLink': 'assets/images/pos.svg',
       },
     ];
 
