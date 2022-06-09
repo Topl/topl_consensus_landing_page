@@ -47,24 +47,21 @@ class HeroHeader extends StatelessWidget {
             ),
             ResponsiveGridCol(
               lg: 6,
-              child: Padding(
-                padding: const EdgeInsets.all(0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    SimpleShadow(
-                      child: SvgPicture.asset(
-                        'images/blockchain.svg',
-                        width: 435,
-                        color: Colors.white,
-                      ),
-                      opacity: 0.5,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  SimpleShadow(
+                    child: SvgPicture.asset(
+                      'images/blockchain.svg',
+                      width: 435,
                       color: Colors.white,
-                      offset: const Offset(1, 1),
-                      sigma: 10,
                     ),
-                  ],
-                ),
+                    opacity: 0.5,
+                    color: Colors.white,
+                    offset: const Offset(1, 1),
+                    sigma: 10,
+                  ),
+                ],
               ),
             ),
           ],
