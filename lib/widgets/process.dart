@@ -6,6 +6,7 @@ import 'package:responsive_grid/responsive_grid.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/constants/styles.dart';
+import 'package:topl_consensus_landing_page/helpers.dart';
 
 class Process extends StatelessWidget {
   const Process({Key? key}) : super(key: key);
@@ -13,6 +14,73 @@ class Process extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+
+    Padding returnNumberStep(numberStep, textStep) {
+      const gradient = LinearGradient(
+        colors: <Color>[
+          ToplColors.tertiary,
+          ToplColors.primaryGradient,
+        ],
+      );
+
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SimpleShadow(
+              child: Container(
+                width: 80,
+                height: 80,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  color: Colors.white,
+                ),
+                child: ShaderMask(
+                  shaderCallback: (Rect bounds) {
+                    return gradient.createShader(Offset.zero & bounds.size);
+                  },
+                  child: Center(
+                    child: Text(
+                      numberStep,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: isSmallScreen(context) ? 30.0 : 60.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              opacity: 0.1,
+              color: Colors.grey,
+              offset: const Offset(1, 1),
+              sigma: 10,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                textStep,
+                style: ToplTextStyles.body1.copyWith(
+                  color: Colors.white,
+                  shadows: [
+                    const Shadow(
+                      blurRadius: 10.0,
+                      color: Colors.grey,
+                      offset: Offset(1, 1),
+                    ),
+                  ],
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
 
     return Container(
       width: screenSize.width,
@@ -109,73 +177,6 @@ class Process extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  Padding returnNumberStep(numberStep, textStep) {
-    const gradient = LinearGradient(
-      colors: <Color>[
-        ToplColors.tertiary,
-        ToplColors.primaryGradient,
-      ],
-    );
-
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 40),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SimpleShadow(
-            child: Container(
-              width: 80,
-              height: 80,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(15)),
-                color: Colors.white,
-              ),
-              child: ShaderMask(
-                shaderCallback: (Rect bounds) {
-                  return gradient.createShader(Offset.zero & bounds.size);
-                },
-                child: Center(
-                  child: Text(
-                    numberStep,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 60.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            opacity: 0.1,
-            color: Colors.grey,
-            offset: const Offset(1, 1),
-            sigma: 10,
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              textStep,
-              style: ToplTextStyles.body1.copyWith(
-                color: Colors.white,
-                shadows: [
-                  const Shadow(
-                    blurRadius: 10.0,
-                    color: Colors.grey,
-                    offset: Offset(1, 1),
-                  ),
-                ],
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ],
       ),
     );
   }
