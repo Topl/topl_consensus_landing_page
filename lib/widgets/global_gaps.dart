@@ -13,23 +13,11 @@ class GlobalGaps extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
 
     returnPaddingByScreenSize() {
-      if (isExtraLargeScreen(context)) {
-        return 180.00;
+      if (isSmallScreen(context) || isMediumScreen(context)) {
+        return 0.0;
       }
 
-      if (isLargeScreen(context)) {
-        return 60.00;
-      }
-
-      if (isMediumScreen(context)) {
-        return 60.00;
-      }
-
-      if (isSmallScreen(context)) {
-        return 0.00;
-      }
-
-      return 0.00;
+      return 50.0;
     }
 
     return Container(
