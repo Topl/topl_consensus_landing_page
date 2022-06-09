@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/constants/styles.dart';
+import 'package:topl_consensus_landing_page/helpers.dart';
 import 'package:video_player/video_player.dart';
 
 class ButtonPartial extends StatefulWidget {
@@ -34,6 +35,87 @@ class _ButtonPartialState extends State<ButtonPartial> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+
+    List<Widget> returnSocialButtons() {
+      return [
+        SizedBox(
+          width: 200,
+          child: ElevatedButton(
+            onPressed: () => html.window.open('https://bit.ly/ToplDiscord', 'new tab'),
+            style: ElevatedButton.styleFrom(
+              shadowColor: Colors.transparent,
+              primary: Colors.transparent,
+              shape: RoundedRectangleBorder(
+                side: const BorderSide(
+                  color: ToplColors.primary,
+                  width: 2,
+                  style: BorderStyle.solid,
+                ),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              elevation: 0,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const FaIcon(
+                    FontAwesomeIcons.discord,
+                    size: 20,
+                    color: ToplColors.primary,
+                  ),
+                  Text(
+                    'Discord',
+                    style: ToplTextStyles.body1Bold.copyWith(color: ToplColors.primary),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 20,
+          height: 20,
+        ),
+        SizedBox(
+          width: 200,
+          child: ElevatedButton(
+            onPressed: () => html.window.open('https://topl.typeform.com/to/ptnvogkn', 'new tab'),
+            style: ElevatedButton.styleFrom(
+              shadowColor: Colors.transparent,
+              primary: Colors.transparent,
+              shape: RoundedRectangleBorder(
+                side: const BorderSide(
+                  color: ToplColors.primary,
+                  width: 2,
+                  style: BorderStyle.solid,
+                ),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              elevation: 0,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const FaIcon(
+                    FontAwesomeIcons.envelope,
+                    size: 20,
+                    color: ToplColors.primary,
+                  ),
+                  Text(
+                    'Mailing List',
+                    style: ToplTextStyles.body1Bold.copyWith(color: ToplColors.primary),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ];
+    }
 
     return Container(
       width: screenSize.width,
@@ -73,86 +155,14 @@ class _ButtonPartialState extends State<ButtonPartial> {
             const SizedBox(
               height: 0,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: 180,
-                  child: ElevatedButton(
-                    onPressed: () => html.window.open('https://bit.ly/ToplDiscord', 'new tab'),
-                    style: ElevatedButton.styleFrom(
-                      shadowColor: Colors.transparent,
-                      primary: Colors.transparent,
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(
-                          color: ToplColors.primary,
-                          width: 2,
-                          style: BorderStyle.solid,
-                        ),
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      elevation: 0,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          const FaIcon(
-                            FontAwesomeIcons.discord,
-                            size: 20,
-                            color: ToplColors.primary,
-                          ),
-                          Text(
-                            'Discord',
-                            style: ToplTextStyles.body1Bold.copyWith(color: ToplColors.primary),
-                          ),
-                        ],
-                      ),
-                    ),
+            isSmallScreen(context)
+                ? Column(
+                    children: returnSocialButtons(),
+                  )
+                : Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: returnSocialButtons(),
                   ),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                SizedBox(
-                  width: 200,
-                  child: ElevatedButton(
-                    onPressed: () => html.window.open('https://topl.typeform.com/to/ptnvogkn', 'new tab'),
-                    style: ElevatedButton.styleFrom(
-                      shadowColor: Colors.transparent,
-                      primary: Colors.transparent,
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(
-                          color: ToplColors.primary,
-                          width: 2,
-                          style: BorderStyle.solid,
-                        ),
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      elevation: 0,
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          const FaIcon(
-                            FontAwesomeIcons.envelope,
-                            size: 20,
-                            color: ToplColors.primary,
-                          ),
-                          Text(
-                            'Mailing List',
-                            style: ToplTextStyles.body1Bold.copyWith(color: ToplColors.primary),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            )
           ],
         ),
       ),

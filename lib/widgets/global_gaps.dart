@@ -65,7 +65,6 @@ class GlobalGaps extends StatelessWidget {
                   ResponsiveGridCol(
                     lg: 4,
                     child: Column(
-                      // mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SvgPicture.asset(
                           'images/global_warming.svg',
