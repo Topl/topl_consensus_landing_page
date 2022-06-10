@@ -55,9 +55,8 @@ class GlobalGaps extends StatelessWidget {
                     child: Column(
                       children: [
                         SvgPicture.asset(
-                          'assets/images/global_warming.svg',
-                          width: 300,
-                          color: ToplColors.defaultText,
+                          'assets/images/carbon_gap.svg',
+                          width: 200,
                         ),
                         const SizedBox(
                           height: 20,
@@ -88,9 +87,8 @@ class GlobalGaps extends StatelessWidget {
                     child: Column(
                       children: [
                         SvgPicture.asset(
-                          'assets/images/gender_scale.svg',
-                          width: 300,
-                          color: ToplColors.defaultText,
+                          'assets/images/gender_gap.svg',
+                          width: 200,
                         ),
                         const SizedBox(
                           height: 20,
@@ -123,7 +121,6 @@ class GlobalGaps extends StatelessWidget {
                         SvgPicture.asset(
                           'assets/images/wealth_gap.svg',
                           width: 300,
-                          color: ToplColors.defaultText,
                         ),
                         const SizedBox(
                           height: 20,

@@ -34,7 +34,6 @@ class Ethos extends StatelessWidget {
               child: SvgPicture.asset(
                 ethosData["icon"]!,
                 width: 300,
-                color: Colors.white,
               ),
               opacity: 0.5,
               color: Colors.white,

@@ -200,7 +200,7 @@ class ItemTile extends StatelessWidget {
       {
         'title': 'Dual Tokenomics',
         'subtitle':
-            "Key to supporting broad networks of users is ensuring transaction fees remain low and stable even as the network grows. With a dual-token design, Topl's users benefit from a dedicated stablecoin for payments.",
+            "The key to ensuring Topl can support broad networks of users is ensuring that transaction fees remain low and stable even as the network grows in popularity and value. With a dual-token design, Topl's users benefit from access to the Poly stablecoin to pay for transaction fees, which remains stable even as the network appreciates in value.",
         'imageLink': 'assets/images/tokens.svg',
       },
       {
@@ -212,13 +212,13 @@ class ItemTile extends StatelessWidget {
       {
         'title': 'Layer 2 Smart Contracts',
         'subtitle':
-            "For the use-cases where Quivr proves to limiting, the second layer of Topl's ledger logic system comes into play. Topl integrates the fully Turing-complete Digital Asset Modeling Language (DAML) as a scalable, privacy preserving layer 2 scheme.",
+            "For the use-cases where Quivr proves too limiting, the second layer of Topl's ledger logic system comes into play. Topl integrates the fully Turing-complete Digital Asset Modeling Language (DAML) as a scalable, privacy-preserving layer 2 scheme.",
         'imageLink': 'assets/images/contract.svg',
       },
       {
         'title': 'Taktikos PoS',
         'subtitle':
-            "Topl's novel consensus algorithm, Taktikos, breaks the trend of allowing only those users with extremely large token balances to participate in staking while at the same time being the first protocol to exceed the security guarantees of Bitcoin's Proof-of-Work.",
+            "Topl's novel consensus algorithm, Taktikos, breaks the trend of allowing only those users with substantial token balances to participate in staking while at the same time being the first protocol to exceed the security guarantees of Bitcoin's Proof-of-Work.",
         'imageLink': 'assets/images/pos.svg',
       },
     ];

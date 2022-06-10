@@ -13,21 +13,21 @@ class EthosContainer extends StatelessWidget {
         "title": "Purpose-built",
         "subtitle":
             "Topl was conceived from the idea that sustainable and inclusive transformation requires technology built to spec. The protocol is uniquely designed to unlock and incentivize positive impact through its adoption.",
-        "icon": "assets/images/purpose.svg",
+        "icon": "assets/images/purpose_built.svg",
         "iconPlacement": "left",
       },
       {
         "title": "Community-forward",
         "subtitle":
-            "No minimums required for staking participation and governance that will set a new standard for community control of funds and decisions, Topl embraces inclusion as a core tenet of not just what we want to enable but of how we're built.",
-        "icon": "assets/images/community.svg",
+            "No minimums are required for staking participation and governance that will set a new standard for community control of funds and decisions. Topl embraces inclusion as a core tenet of what we want to enable and how we're built.",
+        "icon": "assets/images/community_forward.svg",
         "iconPlacement": "right",
       },
       {
         "title": "Scalable and interconnected",
         "subtitle":
-            "Blockchains thrive with scale and complexity. The Topl Protocol was designed as a L0 ecosystem of compatible chains with a focus on highly composable token and smart contract design.",
-        "icon": "assets/images/connected.svg",
+            "Blockchains thrive with scale and complexity. The Topl Protocol was designed as an L0 ecosystem of compatible chains focused on highly composable token and smart contract design.",
+        "icon": "assets/images/scalable_interconnected.svg",
         "iconPlacement": "left",
       },
     ];
