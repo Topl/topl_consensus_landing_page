@@ -29,7 +29,7 @@ class GlobalGaps extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
-              'Global Gaps',
+              'Join us in closing these global gaps',
               style: ToplTextStyles.h2,
               textAlign: TextAlign.center,
             ),

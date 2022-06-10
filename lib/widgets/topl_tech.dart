@@ -200,7 +200,7 @@ class ItemTile extends StatelessWidget {
       {
         'title': 'Dual Tokenomics',
         'subtitle':
-            "Key to ensuring Topl can support broad networks of users is ensuring that transaction fees remain low and stable even as the network grows in popularity and value. With a dual-token design, Topl's users benefit from access to the Poly stablecoin to pay for transaction fees, which remains stable even as the network appreciates in value.",
+            "Key to supporting broad networks of users is ensuring transaction fees remain low and stable even as the network grows. With a dual-token design, Topl's users benefit from a dedicated stablecoin for payments.",
         'imageLink': 'assets/images/tokens.svg',
       },
       {
@@ -234,7 +234,7 @@ class ItemTile extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SvgPicture.asset(
@@ -246,6 +246,9 @@ class ItemTile extends StatelessWidget {
                     grantProgramConditions[itemNo]['title'],
                     style: ToplTextStyles.h3.copyWith(color: ToplColors.defaultText),
                     textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(
+                    height: 40,
                   ),
                   Text(
                     grantProgramConditions[itemNo]['subtitle'],

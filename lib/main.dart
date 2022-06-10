@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
+import 'package:topl_consensus_landing_page/helpers.dart';
 import 'package:topl_consensus_landing_page/widgets/backed_by.dart';
 import 'package:topl_consensus_landing_page/widgets/bottom_bar.dart';
 import 'package:topl_consensus_landing_page/widgets/button_partial.dart';
@@ -35,6 +36,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
       body: DefaultTabController(
         length: 2,
@@ -56,12 +59,15 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 backgroundColor: Colors.transparent,
-                title: SvgPicture.asset(
-                  'assets/images/topl_logo_light.svg',
-                  width: 60,
+                title: Container(
+                  margin: EdgeInsets.only(left: isSmallScreen(context) ? 0 : screenSize.width * 0.1, top: 20),
+                  width: 80,
+                  child: Image.asset(
+                    'assets/images/topl_all_white.png',
+                    width: 80,
+                  ),
                 ),
-                pinned: false,
-                floating: true,
+                centerTitle: isSmallScreen(context) ? true : false,
               ),
             ];
           },

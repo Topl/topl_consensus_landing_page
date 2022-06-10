@@ -74,6 +74,7 @@ class BottomBar extends StatelessWidget {
             style: TextStyle(
               color: ToplColors.greyText,
               fontSize: 14,
+              fontFamily: 'DM Sans',
             ),
           ),
         ],

@@ -56,21 +56,9 @@ class BackedBy extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
-                        "assets/images/cryptology.png",
-                        width: 70,
-                        height: 70,
-                        color: ToplColors.greyText,
-                      ),
-                    ),
-                  ),
-                  ResponsiveGridCol(
-                    lg: 3,
-                    child: Padding(
-                      padding: const EdgeInsets.all(12),
-                      child: Image.asset(
-                        "assets/images/republic.png",
-                        width: 60,
-                        height: 60,
+                        "assets/images/iconic.png",
+                        width: 50,
+                        height: 50,
                         color: ToplColors.greyText,
                       ),
                     ),
@@ -87,6 +75,18 @@ class BackedBy extends StatelessWidget {
                       ),
                     ),
                   ),
+                  ResponsiveGridCol(
+                    lg: 3,
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Image.asset(
+                        "assets/images/capital_factory.png",
+                        width: 100,
+                        height: 100,
+                        color: ToplColors.greyText,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -98,19 +98,7 @@ class BackedBy extends StatelessWidget {
               child: ResponsiveGridRow(
                 children: [
                   ResponsiveGridCol(
-                    lg: 3,
-                    child: Padding(
-                      padding: const EdgeInsets.all(12),
-                      child: Image.asset(
-                        "assets/images/iconic.png",
-                        width: 50,
-                        height: 50,
-                        color: ToplColors.greyText,
-                      ),
-                    ),
-                  ),
-                  ResponsiveGridCol(
-                    lg: 3,
+                    lg: 4,
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
@@ -122,7 +110,7 @@ class BackedBy extends StatelessWidget {
                     ),
                   ),
                   ResponsiveGridCol(
-                    lg: 3,
+                    lg: 4,
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
@@ -134,7 +122,7 @@ class BackedBy extends StatelessWidget {
                     ),
                   ),
                   ResponsiveGridCol(
-                    lg: 3,
+                    lg: 4,
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
@@ -156,19 +144,7 @@ class BackedBy extends StatelessWidget {
               child: ResponsiveGridRow(
                 children: [
                   ResponsiveGridCol(
-                    lg: 3,
-                    child: Padding(
-                      padding: const EdgeInsets.all(12),
-                      child: Image.asset(
-                        "assets/images/capital_factory.png",
-                        width: 100,
-                        height: 100,
-                        color: ToplColors.greyText,
-                      ),
-                    ),
-                  ),
-                  ResponsiveGridCol(
-                    lg: 3,
+                    lg: 4,
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
@@ -180,7 +156,7 @@ class BackedBy extends StatelessWidget {
                     ),
                   ),
                   ResponsiveGridCol(
-                    lg: 3,
+                    lg: 4,
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
@@ -192,7 +168,7 @@ class BackedBy extends StatelessWidget {
                     ),
                   ),
                   ResponsiveGridCol(
-                    lg: 3,
+                    lg: 4,
                     child: Padding(
                       padding: const EdgeInsets.all(12),
                       child: Image.asset(
