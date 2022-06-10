@@ -119,8 +119,8 @@ class GlobalGaps extends StatelessWidget {
                     child: Column(
                       children: [
                         SvgPicture.asset(
-                          'assets/images/wealth_gap.svg',
-                          width: 320,
+                          'assets/images/wealth_gap_safe.svg',
+                          width: 300,
                         ),
                         const SizedBox(
                           height: 20,
