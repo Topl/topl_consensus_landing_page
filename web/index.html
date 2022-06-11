@@ -30,6 +30,14 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <title>Topl Grants</title>
+
+  <script>
+    var host = "www.grants.topl.co" || "grants.topl.co";
+    if ((host == window.location.host) && (window.location.protocol != "https:")){
+    window.location.protocol = "https";
+    }
+  </script>
+
   <link rel="manifest" href=”manifest.json” crossorigin="use-credentials" />
 </head>
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
