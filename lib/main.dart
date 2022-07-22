@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:topl_consensus_landing_page/constants/colors.dart';
 import 'package:topl_consensus_landing_page/helpers.dart';
 import 'package:topl_consensus_landing_page/widgets/backed_by.dart';
@@ -7,7 +6,6 @@ import 'package:topl_consensus_landing_page/widgets/bottom_bar.dart';
 import 'package:topl_consensus_landing_page/widgets/button_partial.dart';
 import 'package:topl_consensus_landing_page/widgets/ethos_container.dart';
 import 'package:topl_consensus_landing_page/widgets/global_gaps.dart';
-import 'package:topl_consensus_landing_page/widgets/grant_program.dart';
 import 'package:topl_consensus_landing_page/widgets/hero_header.dart';
 import 'package:topl_consensus_landing_page/widgets/process.dart';
 import 'package:topl_consensus_landing_page/widgets/topl_tech.dart';
@@ -76,7 +74,6 @@ class HomePage extends StatelessWidget {
               HeroHeader(),
               GlobalGaps(),
               EthosContainer(),
-              GrantProgram(),
               Process(),
               ButtonPartial(),
               ToplTech(),
